@@ -283,19 +283,6 @@ def scrape_bc(album_object):
         album_object.album_art = bc_album_art(html)
     
     return album_object
-
-#run checks to see what information is missing from the album
-def checks(album_object):
-    time_check = False
-    release_date_check = False
-    all_info_found = False
-    if album_object.time == "":
-        time_check = True
-    if album_object.release_date == "":
-        release_date_check = True
-    if (time_check == False) and (release_date_check == False):
-        all_info_found = True
-    return time_check, release_date_check, all_info_found
         
 def scrape(album_object):
     # print("Checking Wikipedia")
